@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+    <header>
+        <img id="logo" src="{% static 'img/logo.png' %}" alt="Logo">
+        <div id="container-boas-vindas"><p id="boas-vindas">Seja Bem-Vindo(a)! A Tabela de Preços Interativa Django.</p></div>
+    </header>
+
+    <nav id="menu">
+        <h2>MENU</h2>
+        <ul>
+        {% for sessao in sessoes %}
+            <li><a href="#{{ sessao }}"><div class="botao"><b>{{ sessao }}</b></div></a></li>
+        {% endfor %}
+        </ul>
+    </nav>
+
+    <main>
+        {% for sessao in lista_sessoes %}
+        <section id="{{ sessao.nome_sessao }}" class="container">
+            <h2>{{ sessao.nome_sessao }}</h2>
+            <ul>
+                {% for produto in sessao.produtos %}
+                    <li>{{ produto.descricao }} - <b>R$ {{ produto.preco }}</b></li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endfor %}
+    </main>
+    
+    <a href="#menu" id="botao-menu"><b>MENU</b></a>
+</body>
+</html>
