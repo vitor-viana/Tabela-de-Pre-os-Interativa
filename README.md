@@ -18,4 +18,4 @@ listagem de produtos por categoria na pagina index do projeto.
 ## O layout do sistema é 100% responsivo!
 <img src="./img_readme/index_responsivo.gif">
 
-## <a href="https://www.linkedin.com/feed/update/urn:li:activity:7032764429154795520/">Vídeo do Projeto no Linkedin</a>
+<a href="https://www.linkedin.com/feed/update/urn:li:activity:7032764429154795520/">Vídeo do Projeto no Linkedin</a>
